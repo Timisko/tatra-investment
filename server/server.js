@@ -4,12 +4,15 @@ import multer from 'multer'
 import fs from 'fs'
 import { exec } from "node:child_process";
 import path from "node:path";
+import sqlite_db from "./database/sqlite.js";
+import bodyParser from "body-parser";
 
 const app = express()
 const port = 3000
+const {exec_query, select_query} = await sqlite_db()
 
 app.use(cors())
-//app.use(bodyParser.json())
+app.use(bodyParser.json())
 
 app.get('/', (req, res) => {
     res.send('Hello World!')
@@ -46,10 +49,19 @@ app.post('/voice2text', upload.single('audio'), (req, res) => {
     }, 500)
 })
 
-app.get('/messages', (req, res) => {
+app.get('/messages', async (req, res) => {
+    const data = await select_query('SELECT * FROM messages')
+
     res.json({
-        messages: [{bot: true, message: 'Welcome'}, {bot: false, message: 'Help me pls!!'}, {bot: true, message: 'Dont help me'}, {bot: true, message: 'Welcome'}, {bot: false, message: 'Help me pls!!'}, {bot: true, message: 'Dont help me'}, {bot: true, message: 'Welcome'}, {bot: false, message: 'Help me pls!!'}, {bot: true, message: 'Dont help me'}, {bot: true, message: 'Welcome'}, {bot: false, message: 'Help me pls!!'}, {bot: true, message: 'Dont help me'}]
+        messages: data
     })
+})
+
+app.post('/add_message', (req, res) => {
+
+    const message = req.body
+
+    exec_query(`INSERT INTO messages(text, bot, client_id) VALUES('${message.text}', false, 1)`)
 })
 
 app.listen(port, () => {

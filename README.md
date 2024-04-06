@@ -30,5 +30,20 @@
 3. Pouzivatelia Tatra Banky by mali urcitu vyhodu napr. v rozsirenych funkciach alebo iba pre pouzivatelov tatra banky by boli odmeny
 - napr. by mali viac personalizovaneho AI asistenta ktory by im podla ich financnej situacie daval specificke rady a odporucania
 </h6>
+<br />
+
+<h6>
+  4. Vstupny bonus pri registracii tak ako pri vytvoreni noveho uctu.
+  - napr. 20 eur do urcitej investicnej prilezitosti. alebo rovno 20eur ktore podla svojej volby moze investovat.
+</h6>
+
+<br />
+
+<h2> --- BUSSINESS LOGIKA --- </h2>
+<h6>
+  1. Urcita viazanost.. ak klient dostane nejaku odmenu napr. vstupny bonus bude musiet cakat urcite obdobie nesmie si ho hned vybrat.
+  - tymto zarucime ze si nebude okamzite vyberat sumu a je teoreticky mozne ze ak chce zacat s investovanim a zacne prave tu (aj kvoli odmene na zaciatok) tak ostane pri tejto moznosti urcitu dobu a to taktiez tym ze bude dostavat pravidelne odmeny.
+  - ak by s investovanim nepokracoval je mozne ze sa tam uz ani nevrati a peniaze ostavaju investovane a banka s nimi moze nadalej pracovat.
+</h6>
 
 </div>

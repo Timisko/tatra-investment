@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.fadeIn-short {
+    animation: fadeIn 0.7s ease-in-out forwards;
+}
+
+.fadeIn-long {
+    animation: fadeIn 1.4s ease-in-out forwards;
+}

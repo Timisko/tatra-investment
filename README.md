@@ -13,6 +13,9 @@
 1. QUIZ
 - urobime quiz pre rozne investicne moznosti (reality, etf, fondy..) <br />
 - ak quiz vyplni dostane odmenu prave v tej moznosti ktorej quiz vyplnil ak to bude mozne <br />
+- pred kvizom je nejaká forma vzdelavania formou interaktivneho videa alebo nejakej dokumentacie <br />
+- za urcitu uspesnost klient ziskava odmenu v podobe nejak0ho podielu a pod. z danej oblasti ktorej robil quiz <br />
+- zakladn0 vlastnosti quizu: zabavny, jednoduchy, lakavy, (moze byt ako hra)
 </h6>
 <br />
 

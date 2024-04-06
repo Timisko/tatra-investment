@@ -4,7 +4,7 @@ import os
 
 r = sr.Recognizer()
 
-audio = AudioSegment.from_mp3('voice.mp3')
+audio = AudioSegment.from_ogg('./tmp/voice.ogg')
 audio.export('voice.wav', format='wav')
 
 audio_file = sr.AudioFile('voice.wav')

@@ -12,7 +12,10 @@
     "type-check": "vue-tsc --build --force"
   },
   "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
     "express": "^4.19.2",
+    "multer": "^1.4.5-lts.1",
     "vue": "^3.4.21",
     "vue-router": "^4.3.0"
   },

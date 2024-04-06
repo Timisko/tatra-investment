@@ -46,6 +46,12 @@ app.post('/voice2text', upload.single('audio'), (req, res) => {
     }, 500)
 })
 
+app.get('/messages', (req, res) => {
+    res.json({
+        messages: [{bot: true, message: 'Welcome'}, {bot: false, message: 'Help me pls!!'}, {bot: true, message: 'Dont help me'}, {bot: true, message: 'Welcome'}, {bot: false, message: 'Help me pls!!'}, {bot: true, message: 'Dont help me'}, {bot: true, message: 'Welcome'}, {bot: false, message: 'Help me pls!!'}, {bot: true, message: 'Dont help me'}, {bot: true, message: 'Welcome'}, {bot: false, message: 'Help me pls!!'}, {bot: true, message: 'Dont help me'}]
+    })
+})
+
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`)
 })

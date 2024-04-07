@@ -22,11 +22,11 @@ export default async function sqlite_db() {
                     if (err) {
                         console.error('Error creating table ' + err.message);
                     }
-                    db.run("INSERT INTO clients(id, name, password) VALUES(1, 'Jan Pekny', 'heslo')")
-                    db.run("INSERT INTO clients(id, name, password) VALUES(2, 'Juraj Vedomy', 'heslo')")
-                    db.run("INSERT INTO clients(id, name, password) VALUES(3, 'Michal Lavy', 'heslo')")
-                    db.run("INSERT INTO clients(id, name, password) VALUES(4, 'Matej Pravy', 'heslo')")
-                    db.run("INSERT INTO clients(id, name, password) VALUES(5, 'Stefan Stary', 'heslo')")
+                    db.run("INSERT INTO clients(name, password) VALUES('Jan Pekny', 'heslo')")
+                    db.run("INSERT INTO clients(name, password) VALUES('Juraj Vedomy', 'heslo')")
+                    db.run("INSERT INTO clients(name, password) VALUES('Michal Lavy', 'heslo')")
+                    db.run("INSERT INTO clients(name, password) VALUES('Matej Pravy', 'heslo')")
+                    db.run("INSERT INTO clients(name, password) VALUES('Stefan Stary', 'heslo')")
                 });
 
                 db.run('CREATE TABLE IF NOT EXISTS portfolios (id INTEGER PRIMARY KEY AUTOINCREMENT, strategy TEXT, regularity TEXT, investment DECIMAL, private BOOL, client_id INTEGER)', (err) => {

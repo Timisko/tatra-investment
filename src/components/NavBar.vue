@@ -10,10 +10,11 @@
                 width="100">
             </div>
             <div class="h-full flex items-center space-x-6 py-2">
-                <button class="h-full flex items-center text-xl hover:border-b-2 hover:border-tatra_blue transition-transform ease-in-out duration-300 hover:scale-105">Investície</button>
-                <button class="h-full flex items-center text-xl hover:border-b-2 hover:border-tatra_blue transition-transform ease-in-out duration-300 hover:scale-105">Transakcie</button>
-                <button class="h-full flex items-center text-xl hover:border-b-2 hover:border-tatra_blue transition-transform ease-in-out duration-300 hover:scale-105">Vzdelávanie</button>
-                <button class="h-full flex items-center text-xl hover:border-b-2 hover:border-tatra_blue transition-transform ease-in-out duration-300 hover:scale-105">Profil</button>
+                <button @click="$router.push('/home')" class="h-full flex items-center text-xl hover:border-b-2 hover:border-tatra_blue transition-transform ease-in-out duration-300 hover:scale-105">Investície</button>
+                <button @click="$router.push('/transactions')" class="h-full flex items-center text-xl hover:border-b-2 hover:border-tatra_blue transition-transform ease-in-out duration-300 hover:scale-105">Transakcie</button>
+                <button @click="$router.push('/education')" class="h-full flex items-center text-xl hover:border-b-2 hover:border-tatra_blue transition-transform ease-in-out duration-300 hover:scale-105">Vzdelávanie</button>
+                <button @click="$router.push('/profile')" class="h-full flex items-center text-xl hover:border-b-2 hover:border-tatra_blue transition-transform ease-in-out duration-300 hover:scale-105">Profil</button>
+                <button @click="$router.push('/portfolios')" class="h-full flex items-center text-xl hover:border-b-2 hover:border-tatra_blue transition-transform ease-in-out duration-300 hover:scale-105">Portfólia</button>
             </div>
             <div class="flex-1 flex justify-end items-center space-x-20 py-2">
                 <div class="text-xl font-thin">

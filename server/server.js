@@ -2,7 +2,7 @@ import express from 'express'
 import cors from 'cors'
 import multer from 'multer'
 import fs from 'fs'
-import { exec } from "node:child_process";
+import {exec} from "node:child_process";
 import path from "node:path";
 import sqlite_db from "./database/sqlite.js";
 import bodyParser from "body-parser";
@@ -20,7 +20,7 @@ app.get('/', (req, res) => {
     res.send('Hello World!')
 })
 
-const upload = multer({ dest: 'server/lib/tmp/' });
+const upload = multer({dest: 'server/lib/tmp/'});
 const storage = multer.memoryStorage()
 
 app.post('/voice2text', upload.single('audio'), (req, res) => {
@@ -56,6 +56,14 @@ app.get('/messages', async (req, res) => {
 
     res.json({
         messages: data
+    })
+})
+
+app.get('/is_valid_user', async (req, res) => {
+    const users = await select_query('SELECT * FROM clients')
+
+    res.json({
+        users: users
     })
 })
 

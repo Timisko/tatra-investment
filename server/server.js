@@ -6,10 +6,13 @@ import { exec } from "node:child_process";
 import path from "node:path";
 import sqlite_db from "./database/sqlite.js";
 import bodyParser from "body-parser";
+import OpenAI from 'openai'
+import { gpt_key } from "./env.js";
 
 const app = express()
 const port = 3000
 const {exec_query, select_query} = await sqlite_db()
+const openai = new OpenAI({apiKey: gpt_key})
 
 app.use(cors())
 app.use(bodyParser.json())
@@ -57,11 +60,27 @@ app.get('/messages', async (req, res) => {
     })
 })
 
-app.post('/add_message', (req, res) => {
+app.post('/add_message', async (req, res) => {
 
     const message = req.body
 
     exec_query(`INSERT INTO messages(text, bot, client_id) VALUES('${message.text}', false, 1)`)
+
+    // const json = await openai.chat.completions.create({
+    //     messages: [
+    //         {
+    //             role: "system",
+    //             content: "Vráť hodnoty z tohto promptu {strategy: 'Hovorí o tom akou stratégiou sa chce riadiť user', investment: 'Hovorí o tom koľko je ochotný investovať'} ak nevieš z textu zistiť hodnotu nejakej property tak ju označ ako 'null'",
+    //         },
+    //         {role: "user", content: message.text}
+    //     ],
+    //     model: 'gpt-3.5-turbo-0125',
+    //     response_format: {type: "json_object"}
+    // })
+    //
+    // console.log(json)
+
+
 })
 
 app.listen(port, () => {

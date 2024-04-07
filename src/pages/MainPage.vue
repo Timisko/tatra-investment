@@ -4,6 +4,13 @@ import ChatBot from "@/components/ChatBot.vue";
 import NavBar from "@/components/NavBar.vue";
 import InvestmentCard from "@/components/InvestmentCard.vue";
 import router from "@/router";
+import { Api } from "@/util/serverCommunication";
+import { ref } from "vue";
+
+const items = ref([])
+
+Api.get('all_portfolios')
+    .then(v => items.value = v.data)
 
 </script>
 
@@ -13,7 +20,7 @@ import router from "@/router";
 
     <div class="animate__animated animate__bounceInUp px-40 py-10">
       <div class="space-y-3">
-        <div v-for="item in 2">
+        <div v-for="item in items">
           <InvestmentCard />
         </div>
       </div>

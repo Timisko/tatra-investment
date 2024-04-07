@@ -5,6 +5,7 @@ import Regularity from "@/components/portfolio_creation/Regularity.vue";
 import router from "@/router";
 import Cost from "@/components/portfolio_creation/Investment.vue";
 import Options from "@/components/portfolio_creation/Options.vue";
+import { Api } from "@/util/serverCommunication";
 
 const index = ref(1);
 const form = reactive({
@@ -71,6 +72,12 @@ function leavePage() {
   router.push('/home')
 }
 
+async function savePortfolio() {
+  // TODO its saving to 1. id
+  await Api.post('add_portfolio', form)
+  leavePage()
+}
+
 </script>
 
 <template>
@@ -99,15 +106,15 @@ function leavePage() {
         <div class="text-2xl">Stačí už len posledný krok.</div>
         <div class="text-lg">Prajete si aby bolo vaše portfólio dostupné pre iných používateľov aplikácie</div>
         <div class="flex justify-center gap-x-2">
-          <div @click="form.private = 1" :class="form.private == 1 ? 'bg-tatra_blue text-main_color' : ''" class="border cursor-pointer hover:bg-tatra_blue hover:text-main_color border-tatra_blue text-tatra_blue bg-main_color p-4">Áno</div>
-          <div @click="form.private = 2" :class="form.private == 2 ? 'bg-tatra_blue text-main_color' : ''" class="border cursor-pointer hover:bg-tatra_blue hover:text-main_color border-tatra_blue text-tatra_blue bg-main_color p-4">Nie</div>
+          <div @click="form.private = 1" :class="form.private == 1 ? 'bg-tatra_blue text-main_color' : 'text-tatra_blue'" class="border cursor-pointer hover:bg-tatra_blue hover:text-main_color border-tatra_blue bg-main_color p-4">Áno</div>
+          <div @click="form.private = 2" :class="form.private == 2 ? 'bg-tatra_blue text-main_color' : 'text-tatra_blue'" class="border cursor-pointer hover:bg-tatra_blue hover:text-main_color border-tatra_blue bg-main_color p-4">Nie</div>
         </div>
         <div class="text-sm">
           <i class="fa fa-warning"> Žiadne z Vašich osobných údajov a ani konkrétne zárobky nebudú zverejnené</i>
         </div>
 
         <div v-if="form.private != 0" class="flex justify-center">
-          <div class="border cursor-pointer hover:bg-tatra_blue hover:text-main_color border-tatra_blue text-tatra_blue bg-main_color p-4">
+          <div @click="savePortfolio()" class="border cursor-pointer hover:bg-tatra_blue hover:text-main_color border-tatra_blue text-tatra_blue bg-main_color p-4">
             Uložiť
           </div>
         </div>

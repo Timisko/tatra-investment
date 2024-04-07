@@ -90,6 +90,18 @@ app.post('/add_message', async (req, res) => {
 
 })
 
+app.post('/add_portfolio', async (req, res) => {
+    const portfolio = req.body
+    exec_query(`INSERT INTO portfolios(strategy, regularity, investment, private, client_id) VALUES('${portfolio.strategy}', '${portfolio.regularity}', '${portfolio.investment}', '${portfolio.private}', 1)`)
+    res.json({err: false})
+})
+
+app.get('/all_portfolios', async (req, res) => {
+    const data = await select_query('SELECT * FROM portfolios')
+
+    res.json({data})
+})
+
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`)
 })

@@ -56,7 +56,7 @@ function add_option(i: number) {
 <template>
   <div class="h-full space-y-4 w-full items-center p-14 gap-x-2">
     <div class="flex-1 justify-center items-center flex gap-x-2">
-      <div v-for="i of 5" @click="add_option(i)" :class="list.has(i) ? 'bg-tatra_blue text-main_color' : ''" class="hover:bg-tatra_blue bg-main_color hover:text-main_color cursor-pointer h-48 w-48 border-tatra_blue border flex justify-center items-center text-tatra_blue">
+      <div v-for="i of 5" @click="add_option(i)" :class="list.has(i) ? 'bg-tatra_blue text-main_color' : 'text-tatra_blue'" class="hover:bg-tatra_blue bg-main_color hover:text-main_color cursor-pointer h-48 w-48 border-tatra_blue border flex justify-center items-center">
         <div class="text-center">
           <i :class="get_icon(i)"></i>
           <p>{{get_text(i)}}</p>

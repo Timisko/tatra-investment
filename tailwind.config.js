@@ -5,7 +5,8 @@ export default {
       colors: {
         main_color: '#1D1E23',
         tatra_blue: '#0297FE',
-        card_color: '#212226'
+        card_color: '#212226',
+        tatra_dark: '#0d0d0d'
       },
     },
   },

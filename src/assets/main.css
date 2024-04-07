@@ -19,3 +19,8 @@
 .fadeIn-long {
     animation: fadeIn 1.4s ease-in-out forwards;
 }
+
+.menu-hover {
+    transition: transform 0.3s ease-in-out;
+    transform: scale(1.2);
+}

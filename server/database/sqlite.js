@@ -29,7 +29,7 @@ export default async function sqlite_db() {
                     db.run("INSERT INTO clients(id, name, password) VALUES(5, 'Stefan Stary', 'heslo')")
                 });
 
-                db.run('CREATE TABLE IF NOT EXISTS portfolios (id INTEGER PRIMARY KEY AUTOINCREMENT, strategy TEXT, regularity TEXT, cost DECIMAL, private BOOL, client_id INTEGER)', (err) => {
+                db.run('CREATE TABLE IF NOT EXISTS portfolios (id INTEGER PRIMARY KEY AUTOINCREMENT, strategy TEXT, regularity TEXT, investment DECIMAL, private BOOL, client_id INTEGER)', (err) => {
                 })
             }
         })

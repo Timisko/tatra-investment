@@ -3,6 +3,7 @@
 import ChatBot from "@/components/ChatBot.vue";
 import NavBar from "@/components/NavBar.vue";
 import InvestmentCard from "@/components/InvestmentCard.vue";
+import router from "@/router";
 
 </script>
 
@@ -21,7 +22,7 @@ import InvestmentCard from "@/components/InvestmentCard.vue";
           <div class="w-full h-0.5 bg-card_color rounded"></div>
         </div>
         <div class="mx-4">
-          <button class="bg-tatra_blue px-6 py-2 text-white rounded">Nová investícia</button>
+          <button @click="router.push('/create/portfolio')" class="bg-tatra_blue px-6 py-2 text-white rounded">Nová investícia</button>
         </div>
         <div class="flex-1 flex items-center">
           <div class="w-full h-0.5 bg-card_color rounded"></div>

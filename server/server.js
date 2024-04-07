@@ -7,12 +7,11 @@ import path from "node:path";
 import sqlite_db from "./database/sqlite.js";
 import bodyParser from "body-parser";
 import OpenAI from 'openai'
-import { gpt_key } from "./env.js";
 
 const app = express()
 const port = 3000
 const {exec_query, select_query} = await sqlite_db()
-const openai = new OpenAI({apiKey: gpt_key})
+// const openai = new OpenAI({apiKey: gpt_key})
 
 app.use(cors())
 app.use(bodyParser.json())

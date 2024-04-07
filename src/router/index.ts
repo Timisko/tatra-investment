@@ -7,8 +7,11 @@ import ProfilePage from "@/pages/ProfilePage.vue";
 import TransactionsPage from "@/pages/TransactionsPage.vue";
 import EducationPage from "@/pages/EducationPage.vue";
 import PortfoliosPage from "@/pages/PortfoliosPage.vue";
-
-import { Api } from '@/util/serverCommunication';
+import InterestingArticles from "@/pages/InterestingArticles.vue";
+import EducationalVideos from "@/pages/EducationalVideos.vue";
+import LockedTasks from "@/pages/LockedTasks.vue";
+import DoneTasks from "@/pages/DoneTasks.vue";
+import AvailableTasks from "@/pages/AvailableTasks.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -51,7 +54,30 @@ const router = createRouter({
     {
       path: '/education',
       name: 'education',
-      component: EducationPage
+      redirect: '/education/interesting_articles',
+      component: EducationPage,
+      children: [
+        {
+          path: 'interesting_articles',
+          component: InterestingArticles
+        },
+        {
+          path: 'educational_videos',
+          component: EducationalVideos
+        },
+        {
+          path: 'locked_tasks',
+          component: LockedTasks
+        },
+        {
+          path: 'done_tasks',
+          component: DoneTasks
+        },
+        {
+          path: 'available_tasks',
+          component: AvailableTasks
+        }
+      ]
     },
     {
       path: '/portfolios',

@@ -8,8 +8,8 @@ import NavBar from "@/components/NavBar.vue";
     <div class="bg-main_color w-full h-screen">
         <NavBar></NavBar>
 
-        <div class="px-40">
-            PROFILE
+        <div>
+            
         </div>
     </div>
 </template>

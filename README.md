@@ -39,6 +39,28 @@
 
 <br />
 
+<h6>
+  5. Pri nakupe napr. 8.88eur zaokruhlit na 9eur a zvysok investovat do portfolia podla vyberu.
+  - Len pre tatrabanku (napojeny ucet)
+</h6>
+
+<br />
+
+<h6>
+  6. Investovanie aj pre mladsich. Napr. od 15 kedy maju uz aj svoj ucet by mohli vyuzivat LITE verziu aplikacie.
+  - V LITE verzii by nevedeli investovat svoje peniaze ale plnenim uloh a roznych taskov tak isto ako aj klasicky pouzivatelia by sa vedeli vzdelavat a ziskavat odmeny ktore by sa im odomkli pri dosiahnuti 18 rokov. Odmeny by vedeli pouzit napriklad po prvej investicii po dovrseni 18 a museli by splnit urcite podmienky napr. HODLovat urcitu dobu.
+</h6>
+
+<br />
+
+<h6>
+  7. Spravit z aplikacie mensiu "socialnu siet".
+  - Vedeli by si prezerat profily ostatnych ludi a sledovat do coho oni investuju a taktiez by si vedeli skopirovat ich portofolia upravit a pouzit.
+  - Mohli by sledovat ich prispevky a taktiez aj oni by mohli vediet prispievat a tak podporovat investicnu komunitu
+</h6>
+
+<br />
+
 <h2> --- BUSSINESS LOGIKA --- </h2>
 <h6>
   1. Urcita viazanost.. ak klient dostane nejaku odmenu napr. vstupny bonus bude musiet cakat urcite obdobie nesmie si ho hned vybrat.
